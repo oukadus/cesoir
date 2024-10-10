@@ -1,11 +1,41 @@
+/* @IMPORT FONTS  */
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* LAYOUT  */
 body {
   background-color: #a1c4b7;
-  font-family: sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
+#container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+h2::after {
+  content: "";
+  position: relative;
+  right: 50%;
+  left: 0;
+  top: 0rem;
+  display: inline-block;
+  height: 6px;
+  width: 10%;
+  opacity: 0.8;
+  /* border: 5px solid #db467d; */
+  background-color: #db467d;
+}
+
+/* HEADER */
 header {
   min-height: 50vh;
   background: url("../img/planches.jpg");
@@ -14,24 +44,31 @@ header {
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1rem;
+  width: 30%;
 }
 
 nav ul li {
   padding: 0 1em;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-nav ul li a {
+nav ul li a,
+h1.logo a {
   color: #444245;
   text-decoration: none;
-  font-family: "Carter One", system-ui, sans-serif;
-}
-nav ul li:first-child {
-  flex-basis: 70%;
 }
 
 h1.logo,
@@ -40,8 +77,10 @@ h2.logo {
   text-transform: uppercase;
   font-family: "Carter One", sans-serif;
   position: relative;
+  text-align: left;
 }
 
+/* border bottom logo */
 .logo::after {
   content: "";
   position: relative;
@@ -67,13 +106,13 @@ h1.logo span {
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  position: relative;
 }
 
 #heroshot img {
   height: 200px;
 }
 
+/*  Ajout du triangle css */
 #heroshot::after {
   content: "";
   position: relative;
@@ -87,12 +126,83 @@ h1.logo span {
   opacity: 0.8;
 }
 
+/*  SECTIONS */
+
 section {
   background-color: whitesmoke;
+  display: flex;
 }
 
-h2 {
-  font-size: 2rem;
+section#freshFare {
+  flex-direction: row-reverse;
+}
+
+/* section#ourHistory,
+section#localDistillation */
+
+section article {
+  width: 30%;
+  margin: 1rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section article p {
+  text-align: center;
+}
+
+section img {
+  width: 60%;
+  height: auto;
+}
+
+section#freshFare article {
+  width: 20%;
+}
+
+section#freshFare img {
+  width: 70%;
+}
+
+section#localDistillation article img {
+  width: 10rem;
+}
+
+article p strong {
+  font-weight: 800;
+  color: #db467d;
+  display: block;
+  margin-top: 1rem;
   text-transform: uppercase;
-  font-weight: bolder;
+}
+
+section#egg {
+  display: block;
+}
+
+section#egg img {
+  width: 100%;
+  border: none;
+}
+
+section#egg h2 {
+  display: none;
+}
+
+section {
+  background-image: url("../img/motif.jpg");
+  background-size: cover;
+}
+
+/*  FOOTER */
+
+footer {
+  min-height: 40vh;
+  padding: 3rem;
+  background-image: url("../img/motif.jpg");
+  background-size: cover;
 }
